@@ -1,10 +1,10 @@
 import { Barbell, GoogleLogo } from 'phosphor-react-native'
 import { View, Text, ImageBackground } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
 
 import { Button } from '../../components/Button'
 
 import imgBg from '../../assets/Background.png'
+import { router } from 'expo-router'
 
 export const SignIn: React.FC = () => {
   return (
@@ -30,7 +30,7 @@ export const SignIn: React.FC = () => {
           <Text className='text-zinc-300 mb-8'>
             Clique no botão abaixo para entrar com sua conta Google.
           </Text>
-          <Button>
+          <Button onPress={() => router.push('/home')}>
             <GoogleLogo
               color='white'
               size={24}
